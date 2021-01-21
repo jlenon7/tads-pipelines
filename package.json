@@ -62,7 +62,5 @@
       "json"
     ]
   },
-  "dependencies": {
-    "@jlenon7/tads-pipelines-test": "^1.0.7"
-  }
+  "dependencies": {}
 }
