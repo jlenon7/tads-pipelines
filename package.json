@@ -1,6 +1,9 @@
 {
-  "name": "@jlenon7/tads-pipelines-test",
-  "version": "1.0.1",
+  "name": "@jlenon7/tads-pipelines",
+  "version": "1.0.0",
+  "main": "build",
+  "types": "build",
+  "files": ["build"],
   "scripts": {
     "mrm": "mrm --preset=@adonisjs/mrm-preset",
     "build": "tsc",
@@ -50,7 +53,7 @@
     "transform": {
       "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "testRegex": "(/tests/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
     "moduleFileExtensions": [
       "ts",
       "tsx",
@@ -58,5 +61,8 @@
       "jsx",
       "json"
     ]
+  },
+  "dependencies": {
+    "@jlenon7/tads-pipelines-test": "^1.0.7"
   }
 }
