@@ -1,0 +1,4 @@
+*.yml
+*.json
+.prettierrc
+.editorconfig
