@@ -1,4 +1,4 @@
-# Tads Pipelines 🧠
+# Tads Pipelines 📝
 
 > Apresentação das pipelines de CI/CD
 
