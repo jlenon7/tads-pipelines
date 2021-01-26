@@ -1,9 +1,9 @@
 import { isCpf } from '../../src'
 
+// CPF Gerado utilizando https://4devs.com.br
+
 describe('\n[UNIT] isCpf', () => {
   it('Deve retornar true pois o CPF enviado é válido', () => {
-    // CPF Gerado utilizando https://4devs.com.br
-
     expect(isCpf(52998224725)).toBe(true)
     expect(isCpf('52998224725')).toBe(true)
     expect(isCpf('529.982.247-25')).toBe(true)

@@ -1,0 +1,29 @@
+name: CD Pipeline
+
+on:
+  push:
+    branches:
+      - master
+
+  jobs:
+    publish:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+
+        - name: Instalando NodeJS v14
+          uses: actions/setup-node@v2
+          with:
+            node-version: '14.x'
+            registry-url: 'https://registry.npmjs.org'
+
+        - name: Instalar dependências
+          run: npm install
+
+        - name: Transpilar código
+          run: npm run build
+
+        - name: Publicar para o NPM
+          run: npm publish --access public
+          env:
+            NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

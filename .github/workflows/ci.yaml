@@ -1,0 +1,26 @@
+name: CI Pipeline
+
+on:
+  pull_request:
+    branches:
+      - master
+
+  jobs:
+    test:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+
+        - name: Instalando NodeJS v14
+          uses: actions/setup-node@v2
+          with:
+            node-version: '14.x'
+
+        - name: Instalar dependências
+          run: npm install
+
+        - name: Verificar linting
+          run: npm run test:lint
+
+        - name: Rodar testes
+          run: npm run test:run
